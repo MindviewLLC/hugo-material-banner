@@ -1,3 +1,4 @@
+<header class="header" {{ with .Site.Params.palette.header_color }}style="background-color: {{ . }};"{{ end }}>
 <nav aria-label="Header">
   <div class="bar default">
     <div class="button button-menu" role="button" aria-label="Menu">
@@ -22,12 +23,12 @@
       <a href="https://github.com/{{ . }}" title="@{{ . }} on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
     </div>
     {{ end }}
-    
-    <!-- TODO: disabled until Hugo supports the generation of a content index natively 
+
+    <!-- TODO: disabled until Hugo supports the generation of a content index natively
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
     </div>
-    -->    
+    -->
   </div>
   <div class="bar search">
     <div class="button button-close" role="button" aria-label="Close">
@@ -43,3 +44,4 @@
     </div>
   </div>
 </nav>
+</header>

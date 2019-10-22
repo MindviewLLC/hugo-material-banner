@@ -1,6 +1,4 @@
-
-{{ partial "head" . }}
-
+{{ define "main" }}
 <div class="backdrop">
 	<div class="backdrop-paper"></div>
 </div>
@@ -9,9 +7,7 @@
 <input class="toggle" type="checkbox" id="toggle-search">
 <label class="toggle-button overlay" for="toggle-drawer"></label>
 
-<header class="header" {{ with .Site.Params.palette.header_color }}style="background-color: {{ . }};"{{ end }}>
-	{{ partial "header" . }}
-</header>
+{{ partial "header" . }}
 
 <main class="main">
 	<div class="drawer">
@@ -56,5 +52,5 @@
 		</div>
 	</div>
 </main>
+{{ end }}
 
-{{ partial "footer_js" . }}
