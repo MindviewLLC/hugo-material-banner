@@ -1,33 +1,40 @@
-# The Winter Tech Forum Hugo Static Site Source
+# Material Docs
 
-Hugo Static Site for the [Winter Tech Forum Conference](https://www.WinterTechForum.com).
+A material design theme for [Hugo](https://gohugo.io).
 
-Because of the theme, the site automatically works well on phones as well as
-computers and tablets.
+[![Screenshot](https://raw.githubusercontent.com/digitalcraftsman/hugo-material-docs/master/static/images/screen.png)](https://digitalcraftsman.github.io/hugo-material-docs/)
 
-Everything is in markdown so it's very easy to add/edit content. If you look
-at the "content" subdirectory you'll see how straightforward it is to add new
-pages.
+## Quick start
 
-I think this will also make it easier to clone/set up new conferences.
+Install with `git`:
 
-I'm still coming up the curve on static site generators in general and Hugo in
-particular so if anyone knows more please feel free to make suggestions and/or
-pull requests.
 
-## To Build:
+    git clone https://github.com/digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs
 
-1.  [Install the Hugo](https://hugodocs.info/getting-started/installing/#quick-install) static site generator.
 
-2.  Clone this repository into your "git" subdirectory.
+Next, take a look in the `exampleSite` folder at. This directory contains an example config file and the content for the demo. It serves as an example setup for your documentation. 
 
-3.  From within this repository, run `hugo server` and open your browser at the URL given.
+Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary. 
 
-4.  To create the deployable version, run `hugo` from within this repository.
-    You should now see a `public` directory, which contains the deployable file
-    set.
+Hugo includes a development server, so you can view your changes as you go -
+very handy. Spin it up with the following command:
 
-5.  To duplicate what happens during an actual deploy, first clone
-    [WinterTechForum.github.io](https://github.com/WinterTechForum/WinterTechForum.github.io)
-    into your "git" subdirectory. Now run `python deploy.py` from within this
-    subdirectory.
+``` sh
+hugo server
+```
+
+Now you can go to [localhost:1313](http://localhost:1313) and the Material
+theme should be visible. For detailed installation instructions visit the [demo](http://themes.gohugo.io/theme/material-docs/).
+
+Noteworthy changes of this theme are listed in the [changelog](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/CHANGELOG.md).
+
+## Acknowledgements
+
+A big thank you to [Martin Donath](https://github.com/squidfunk). He created the original [Material theme](https://github.com/squidfunk/mkdocs-material) for Hugo's companion [MkDocs](http://www.mkdocs.org/). This port wouldn't be possible without him.
+
+Furthermore, thanks to [Steve Francia](https://gihub.com/spf13) for creating Hugo and the [awesome community](https://github.com/spf13/hugo/graphs/contributors) around the project.
+
+## License
+
+The theme is released under the MIT license. Read the [license](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md) for more information.
+
