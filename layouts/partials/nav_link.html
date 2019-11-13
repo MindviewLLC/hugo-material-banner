@@ -3,8 +3,8 @@
 
 
 <a {{ if $isCurrent }}class="current"{{ end }} title="{{ $currentMenuEntry.Name }}" href="{{ $currentMenuEntry.URL | relURL}}">
-	{{ $currentMenuEntry.Pre }}
-	{{ $currentMenuEntry.Name }}
+    {{ $currentMenuEntry.Pre }}
+    {{ $currentMenuEntry.Name }}
 </a>
 
 {{ if $isCurrent }}

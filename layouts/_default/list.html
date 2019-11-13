@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="backdrop">
-	<div class="backdrop-paper"></div>
+    <div class="backdrop-paper"></div>
 </div>
 
 <input class="toggle" type="checkbox" id="toggle-drawer">
@@ -10,47 +10,46 @@
 {{ partial "header" . }}
 
 <main class="main">
-	<div class="drawer">
-		{{ partial "drawer" . }}
-	</div>
+    <div class="drawer">
+        {{ partial "drawer" . }}
+    </div>
 
-	<article class="article">
-		<div class="wrapper">
-			{{ with .Site.Params.banner_image }}
-				<div class="logo">
-				<img src="{{ $.Site.BaseURL }}{{ . }}">
-				</div>
-			{{ end }}
-			<h1>Pages in {{ .Title | singularize }}</h1>
+    <article class="article">
+        <div class="wrapper">
+            {{ with .Site.Params.banner_image }}
+                <div class="logo">
+                <img src="{{ $.Site.BaseURL }}{{ . }}">
+                </div>
+            {{ end }}
+            <h1>Pages in {{ .Title | singularize }}</h1>
 
-			{{ range .Data.Pages }}
-			<a href="{{ .Permalink }}" title="{{ .Title }}">
-				<h2>{{ .Title }}</h2>
-			</a>
+            {{ range .Data.Pages }}
+            <a href="{{ .Permalink }}" title="{{ .Title }}">
+                <h2>{{ .Title }}</h2>
+            </a>
 
-			<br>
-			{{ printf "%s" .Summary | markdownify }}
+            <br>
+            {{ printf "%s" .Summary | markdownify }}
 
-			<hr>
-			{{ end }}
+            <hr>
+            {{ end }}
 
-			<aside class="copyright" role="note">
-				{{ with .Site.Params.copyright }}
-				&copy; {{ $.Now.Format "2006" }} {{ . }} &ndash;
-				{{ end }}
-				{{/* Footer Text */}}
-			</aside>
-		</div>
-	</article>
+            <aside class="copyright" role="note">
+                {{ with .Site.Params.copyright }}
+                &copy; {{ $.Now.Format "2006" }} {{ . }} &ndash;
+                {{ end }}
+                {{/* Footer Text */}}
+            </aside>
+        </div>
+    </article>
 
-	<div class="results" role="status" aria-live="polite">
-		<div class="scrollable">
-			<div class="wrapper">
-				<div class="meta"></div>
-				<div class="list"></div>
-			</div>
-		</div>
-	</div>
+    <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+            <div class="wrapper">
+                <div class="meta"></div>
+                <div class="list"></div>
+            </div>
+        </div>
+    </div>
 </main>
 {{ end }}
-
